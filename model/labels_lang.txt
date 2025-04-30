@@ -21,6 +21,7 @@ Norwegian,labels_no.txt
 Polish,labels_pl.txt
 Portugues,labels_pt.txt
 Russian,labels_ru.txt
+Serbian,labels_sr.txt
 Slovak,labels_sk.txt
 Slovenian,labels_sl.txt
 Spanish,labels_es.txt
