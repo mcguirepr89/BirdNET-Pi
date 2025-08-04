@@ -1,6 +1,14 @@
 Hello! 
 
-I no longer maintain this project and therefore consider its installation **deprecated**, but [Nachtzuster](https://github.com/Nachtzuster/) is still keeping it alive [here](https://github.com/Nachtzuster/BirdNET-Pi)! If you are a new user, you can simply start by going to Nachtzuster's fork and following the installation instructions there -- for users who are interestd in migrating to that actively maintained fork, please see the [migration guide](https://github.com/Nachtzuster/BirdNET-Pi?tab=readme-ov-file#migrating) for instructions for your best chance at migrating your current installation to have Nachtzuster's fork as the new upstream origin.
+I no longer maintain this project and therefore consider its installation **deprecated**, but [Nachtzuster](https://github.com/Nachtzuster/) and the BirdNET-Pi community are still keeping it alive [here](https://github.com/Nachtzuster/BirdNET-Pi)! 
+
+If you are a new user, you can simply start by going to Nachtzuster's fork and following the installation instructions there. For users who are interestd in migrating to that actively maintained fork, please see [Nachtzuster's migration guide](https://github.com/Nachtzuster/BirdNET-Pi?tab=readme-ov-file#migrating) for instructions for your best chance at migrating your current installation to have that fork as your new upstream origin.
+
+Take a look at [Nachtzuster's discussions page](https://github.com/Nachtzuster/BirdNET-Pi/discussions) for what's going on with the current development and BirdNET-Pi community.
+
+Thanks, everyone, for your interest in BirdNET-Pi and happy birding
+
+:heart: Patrick
 
 <h1 align="center"><a href="https://github.com/mcguirepr89/BirdNET-Pi/blob/main/LICENSE">Review the license!!</a></h1>
 <h1 align="center">You may not use BirdNET-Pi to develop a commercial product!!!!</h1>
