@@ -103,7 +103,10 @@ Please note that installing BirdNET-Pi on top of other servers is not supported.
 
 The system can be installed with:
 ```
-curl -s https://raw.githubusercontent.com/mcguirepr89/BirdNET-Pi/main/newinstaller.sh | bash
+curl -s https://raw.githubusercontent.com/Nachtzuster/BirdNET-Pi/main/newinstaller.sh | bash
+```
+```
+c̶u̶r̶l̶ -̶s̶ h̶t̶t̶p̶s̶:̶//r̶a̶w̶.g̶i̶t̶h̶u̶b̶u̶s̶e̶r̶c̶o̶n̶t̶e̶n̶t̶.c̶o̶m̶/m̶c̶g̶u̶i̶r̶e̶p̶r̶8̶9̶/B̶i̶r̶d̶N̶E̶T̶-̶P̶i̶/m̶a̶i̶n̶/n̶e̶w̶i̶n̶s̶t̶a̶l̶l̶e̶r̶.s̶h̶ | b̶a̶s̶h̶
 ```
 The installer takes care of any and all necessary updates, so you can run that as the very first command upon the first boot, if you'd like.
 
