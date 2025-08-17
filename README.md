@@ -1,3 +1,15 @@
+Hello! 
+
+I no longer maintain this project and therefore consider its installation **deprecated**, but [Nachtzuster](https://github.com/Nachtzuster/) and the BirdNET-Pi community are still keeping it alive [here](https://github.com/Nachtzuster/BirdNET-Pi)! 
+
+If you are a new user, you can simply start by going to Nachtzuster's fork and [following the installation instructions there](https://github.com/Nachtzuster/BirdNET-Pi?tab=readme-ov-file#installation). For users who are interestd in migrating to that actively maintained fork, please see [Nachtzuster's migration guide](https://github.com/Nachtzuster/BirdNET-Pi?tab=readme-ov-file#migrating) for instructions for your best chance at migrating your current installation to have that fork as your new upstream origin.
+
+Take a look at [Nachtzuster's discussions page](https://github.com/Nachtzuster/BirdNET-Pi/discussions) for what's going on with the current development and BirdNET-Pi community.
+
+Thanks, everyone, for your interest in BirdNET-Pi and happy birding
+
+:heart: Patrick
+
 <h1 align="center"><a href="https://github.com/mcguirepr89/BirdNET-Pi/blob/main/LICENSE">Review the license!!</a></h1>
 <h1 align="center">You may not use BirdNET-Pi to develop a commercial product!!!!</h1>
 <h1 align="center">
@@ -91,7 +103,10 @@ Please note that installing BirdNET-Pi on top of other servers is not supported.
 
 The system can be installed with:
 ```
-curl -s https://raw.githubusercontent.com/mcguirepr89/BirdNET-Pi/main/newinstaller.sh | bash
+curl -s https://raw.githubusercontent.com/Nachtzuster/BirdNET-Pi/main/newinstaller.sh | bash
+```
+```
+c̶u̶r̶l̶ -̶s̶ h̶t̶t̶p̶s̶:̶//r̶a̶w̶.g̶i̶t̶h̶u̶b̶u̶s̶e̶r̶c̶o̶n̶t̶e̶n̶t̶.c̶o̶m̶/m̶c̶g̶u̶i̶r̶e̶p̶r̶8̶9̶/B̶i̶r̶d̶N̶E̶T̶-̶P̶i̶/m̶a̶i̶n̶/n̶e̶w̶i̶n̶s̶t̶a̶l̶l̶e̶r̶.s̶h̶ | b̶a̶s̶h̶
 ```
 The installer takes care of any and all necessary updates, so you can run that as the very first command upon the first boot, if you'd like.
 
