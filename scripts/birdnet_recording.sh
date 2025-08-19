@@ -42,7 +42,7 @@ if [ ! -z $RTSP_STREAM ];then
 
   # Make sure were passing something valid to ffmpeg, ffmpeg will run interactive and control our loop by waiting ${RECORDING_LENGTH} between loops because it will stop once that much has been recorded
   if [ -n "$FFMPEG_PARAMS" ];then
-    ffmpeg -hide_banner -loglevel $LOGGING_LEVEL -nostdin $FFMPEG_PARAMS
+    ffmpeg $RTSP_REC_OPTS -hide_banner -loglevel $LOGGING_LEVEL -nostdin $FFMPEG_PARAMS
   fi
 
   done

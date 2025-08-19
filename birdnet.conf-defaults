@@ -68,6 +68,11 @@ BIRDNETPI_URL=
 
 RTSP_STREAM=
 
+## extra options to pass to ffmpeg for RTSP recording, this can be useful
+## e.g. to force a specific transport
+
+RTSP_REC_OPTS=
+
 #-----------------------  Apprise Miscellanous Configuration -------------------#
 
 APPRISE_NOTIFICATION_TITLE="New BirdNET-Pi Detection"
