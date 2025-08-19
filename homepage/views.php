@@ -447,6 +447,60 @@ window.onbeforeunload = function(event) {
     audioelement.volume = 1
   }
 }
+
+function getTheDate(increment) {
+  var theDate = "<?php echo $theDate;?>";
+
+  d = new Date(theDate);
+  d.setDate(d.getDate(theDate) + increment);
+  yyyy = d.getFullYear();
+  mm = d.getMonth() + 1; if (mm < 10) mm = "0" + mm;
+  dd = d.getDate(); if (dd < 10) dd = "0" + dd;
+
+  swipeSpinner=document.getElementById("SwipeSpinner");
+  swipeSpinner.setAttribute("src","images/spinner.gif");
+  
+  window.location = "/views.php?date="+yyyy+"-"+mm+"-"+dd+"&view=Daily+Charts";
+}
+
+function installKeyAndSwipeEventHandler() {
+  for (var i = 0; i < topbuttons.length; i++) {
+    if (topbuttons[i].textContent == "Daily Charts" && 
+        topbuttons[i].className == "button-hover") {
+
+      document.onkeydown = function(event) {
+        switch (event.keyCode) {
+          case 37: //Left key
+            getTheDate(-1);
+            break;
+          case 39: //Right key
+            getTheDate(+1);
+            break;
+        }
+      }
+
+      // https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
+      let touchstartX = 0
+      let touchendX = 0
+    
+      function checkDirection() {
+        if (touchendX < touchstartX) getTheDate(+1);
+        if (touchendX > touchstartX) getTheDate(-1);
+      }
+
+      document.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX
+      })
+
+      document.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX
+        checkDirection()
+      })
+    }
+  }
+}
+
+installKeyAndSwipeEventHandler();
 </script>
 </div>
 </body>

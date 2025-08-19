@@ -149,6 +149,7 @@ function submitID() {
 			<tr>
 				<th>Total Detections For The Day</th>
 				<td><?php echo $totalcount['COUNT(*)'];?></td>
+                <td><img id="SwipeSpinner" style="height:30px;"></td>
 			</tr>
 		</table>
     	<?php // <br><button type="button" onclick="showDialog()">Export as CSV for eBird</button><br><br> ?>
