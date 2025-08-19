@@ -4,7 +4,7 @@
 echo "........................................IPs....................................."
 echo "LAN IP: $(hostname -I|cut -d' ' -f1)"
 echo "Public IP: $(curl -s4 ifconfig.co)"
-if ! dpkg -l | grep -q vcgencmd ; then
+if dpkg -l | grep -q vcgencmd ; then
   echo "..................................\`vcgencmd stats\`.............................."
   sudo -u$USER vcgencmd get_throttled
   hex=$(sudo -u$USER vcgencmd get_throttled | cut -d'x' -f2)
