@@ -312,6 +312,7 @@ Restart=always
 RestartSec=120
 Type=simple
 User=$USER
+EnvironmentFile=${config_file}
 ExecStart=$PYTHON_VIRTUAL_ENV /usr/local/bin/daily_plot.py
 [Install]
 WantedBy=multi-user.target

@@ -31,12 +31,18 @@ df['Hour of Day'] = [r.hour for r in df.Time]
 df_plt = df  # Default to use the whole Dbase
 
 # Add every font at the specified location
-font_dir = [userDir + '/BirdNET-Pi/homepage/static']
+font_dir = [userDir + '/BirdNET-Pi/homepage/static', '/usr/share/fonts/truetype']
 for font in font_manager.findSystemFonts(font_dir):
     font_manager.fontManager.addfont(font)
 
 # Set font family globally
-rcParams['font.family'] = 'Roboto Flex'
+db_lang = os.environ.get('DATABASE_LANG')
+if db_lang == 'zh':
+  rcParams['font.family'] = 'WenQuanYi Zen Hei'
+  rcParams['font.sans-serif'] = ['WenQuanYi Zen Hei']
+  rcParams['axes.unicode_minus'] = False               # 解决保存图像是负号—'显示为方块的问题
+else:
+  rcParams['font.family'] = 'Roboto Flex'
 
 # Get todays readings
 now = datetime.now()

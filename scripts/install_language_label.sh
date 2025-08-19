@@ -30,4 +30,15 @@ unzip -o $HOME/BirdNET-Pi/model/labels_l18n.zip $label_file_name_flickr \
   && mv -f $HOME/BirdNET-Pi/model/$label_file_name_flickr $HOME/BirdNET-Pi/model/labels_flickr.txt \
   && logger "[$0] Set Flickr labels '$label_file_name_flickr'";
 
+# install corresponding fonts for display characters in daily_plot
+case "${lang}" in
+  zh)
+    sudo apt install -y fonts-wqy-zenhei \
+    && logger "[$0] Install language:${zh} needed fonts";
+    ;;
+  *)
+    true
+    ;;
+esac
+
 exit 0
