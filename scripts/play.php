@@ -523,7 +523,7 @@ echo "<table>
     if($num_rows < 100){
       $imageelem = "<video onplay='setLiveStreamVolume(0)' onended='setLiveStreamVolume(1)' onpause='setLiveStreamVolume(1)' controls poster=\"$filename_png\" preload=\"none\" title=\"$filename\"><source src=\"$filename\"></video>";
     } else {
-      $imageelem = "<a href=\"$filename\"><img src=\"$filename_png\"></a>";
+      $imageelem = "<a href=\"$filename\"><img loading=\"lazy\" src=\"$filename_png\"></a>";
     }
 
     if($config["FULL_DISK"] == "purge") {
