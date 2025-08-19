@@ -14,7 +14,7 @@ source /etc/birdnet/birdnet.conf
 # Set Variables
 TMPFILE=$(mktemp)
 #SCAN_DIRS are all directories marked "Analyzed"
-SCAN_DIRS=($(find $RECS_DIR -type d -name '*Analyzed' 2>/dev/null | sort ))
+SCAN_DIRS=($(find -L $RECS_DIR -type d -name '*Analyzed' 2>/dev/null | sort ))
 
 for h in "${SCAN_DIRS[@]}";do
   # The TMPFILE is created from each .csv file BirdNET creates
@@ -26,7 +26,7 @@ for h in "${SCAN_DIRS[@]}";do
   #  Field 5: Confidence
 
   # Iterates over each "Analyzed" directory
-  for i in $(find ${h} -name '*csv' 2>/dev/null | sort );do 
+  for i in $(find -L ${h} -name '*csv' 2>/dev/null | sort );do 
     # Iterates over each '.csv' file found in each "Analyzed" directory
     # to create the TMPFILE
     echo "$(basename ${i})" >> ${TMPFILE}
@@ -83,7 +83,7 @@ for h in "${SCAN_DIRS[@]}";do
 
     # If there are already 20 extracted entries for a given species
     # for today, remove the oldest file and create the new one.
-   # if [[ "$(find ${NEWSPECIES_BYDATE} | wc -l)" -ge 20 ]];then
+   # if [[ "$(find -L ${NEWSPECIES_BYDATE} | wc -l)" -ge 20 ]];then
    #   echo "20 ${SPECIES}s, already! Removing the oldest by-date and making a new one"
    #   cd ${NEWSPECIES_BYDATE} || exit 1
    #   ls -1t . | tail -n +20 | xargs -r rm -vv
